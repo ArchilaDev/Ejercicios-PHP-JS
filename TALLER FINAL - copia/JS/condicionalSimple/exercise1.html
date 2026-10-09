@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nube</title>
+</head>
+
+<body>
+    <script>
+        let cpu = parseFloat(prompt("Ingrese el porcentaje del cpu"));
+        let ram = parseFloat(prompt("Ingrese el porcentaje de la  RAM"));
+        let disco = parseFloat(prompt("Ingrese el porcentaje del disco"));
+        let red = parseFloat(prompt("Ingrese el numero de red superior"));
+
+        if (cpu >= 85) {
+            alert("La cpu esta sobrecalentada")
+            document.writeln("Revise el servidor")
+        };
+        if (ram >= 90) {
+            alert("La RAMx esta sobrecalentada");
+            document.writeln("Revise el servidor")
+        };
+        if (disco >= 95) {
+            alert("El disco esta sobrecalentada");
+            document.writeln("Revise el servidor")
+        };
+        if (red >= 300) {
+            alert("La red esta sobrecalentada");
+            document.writeln("Revise el servidor")
+        };
+
+    </script>
+</body>
+
+</html>

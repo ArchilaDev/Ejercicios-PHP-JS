@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEUDAS Y CUOTAS</title>
+</head>
+<body style="background-color: rgb(57, 13, 98); color: white; text-align: center;">
+
+    <form action="./receptor.php" method="POST">
+
+        <h2>Amortizacion de deuda</h2>
+
+        <label for="">Monto del prestamo</label> <br>
+        <input type="number" name="monto"> <br>
+        <label for="">Numero de cuotas mensuales</label> <br>
+        <input type="number" name="cuotas"> <br>
+        <label for="">Tasa de interes mensual (%)</label> <br>
+        <input type="number" name="tasa" step="any"> <br>
+        <input type="submit" value="calcular" name="calcular">
+
+    </form>
+
+</body>
+</html>

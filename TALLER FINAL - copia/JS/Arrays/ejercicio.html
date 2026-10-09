@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Solicitar al usuario el ingreso de n cantidad de nombres de empleados y salarios. Sumar los salarios, sacar el promedio de los mismos y mostrar todos los datos
+
+        let n = parseInt(prompt("Ingrese la cantidad de datos"));
+        const nombres = [];
+        const salarios = [];
+        totalSalario = 0;
+        promedio = 0;
+        for(i=0; i<n;i++){
+            let nombre = prompt("Ingrese el nombre del empleado: " + (i+1));
+            let salario = parseFloat(prompt("Ingrese el salario del empleado: "+ (i+1)));
+
+            nombres.push(nombre);
+            salarios.push(salario);
+
+            totalSalario += salario;
+            promedio = (totalSalario)/n;
+        }
+        
+    document.writeln(`<p style='text-align:center;'> <br>Empleado: ${nombres} ${nombres.join("<br>")} <br>Salario: ${salarios} <br> Total de salario de todos los empleados es de:  ${totalSalario}<br> Promedio: ${promedio}</p>`);
+        
+
+    </script>
+</body>
+</html>

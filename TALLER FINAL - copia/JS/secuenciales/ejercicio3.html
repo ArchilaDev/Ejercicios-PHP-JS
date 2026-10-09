@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prima</title>
+</head>
+
+<body>
+    <script>
+        /*Una empresa requiere calcular la prima del primer semestre(15 dias de salario por cada 180 dias
+        trabajados o la proporcion equivalente)
+        Requerimiendo: Solicita al usuario el salario base mensual y los dias trabajados en el 
+        semestre.Muestra el monto total a pagar por concepto de prima de servicios 
+        */
+
+        let salario = parseFloat(prompt("Ingrese el salario del trabajador: \n"));
+        let dia = parseFloat(prompt("Ingrese los dias trabajados del empleado: \n"));
+
+        let total = salario * dia;
+
+        document.writeln(`Total de: $${total.toFixed(2)}`);
+
+    </script>
+</body>
+
+</html>

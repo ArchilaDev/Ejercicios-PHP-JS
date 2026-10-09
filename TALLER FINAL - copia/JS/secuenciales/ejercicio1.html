@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Crea un programa que solicite al usuario el valor de un plato de comida.El programa debe calcular
+        el iva del 19% sobre el precio base e imprimir el valor del iva y el total a pagar en la factura*/
+
+        let precio = parseFloat(prompt("Ingrese su precio del plato de comida"));
+        const IVA = 0.19;
+        let subtotal = precio * IVA;
+        let total = precio + subtotal;
+        document.writeln(`El iva es de : ${subtotal} <br>  y su total completo es de: ${total}`)
+    </script>
+</body>
+</html>

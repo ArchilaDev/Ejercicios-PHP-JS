@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multas de Transito</title>
+</head>
+<body style="background-color: rgb(57, 13, 98); color: white; text-align: center;">
+
+    <form action="./receptor.php" method="POST">
+
+        <h2>Multas de Transito</h2>
+
+        <label for="">Tipo de infraccion (C14 / D02)</label> <br>
+        <input type="text" name="txtTipo"> <br>
+
+        <label for="">Dias transcurridos</label> <br>
+        <input type="number" name="dias"> <br>
+
+        <label for="">Vehiculo inmovilizado (si/no)</label> <br>
+        <input type="text" name="inmovilizado"> <br>
+
+        <label for="">Dias en patios</label> <br>
+        <input type="number" name="dias_patios"> <br>
+
+        <input type="submit" value="calcular" name="calcular">
+
+    </form>
+
+</body>
+</html>

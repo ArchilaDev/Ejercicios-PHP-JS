@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form {
+    background-color: #ffffff;
+    width: 400px;
+    padding: 35px;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+form::before {
+    content: "CALCULADORA";
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 16px;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+}
+
+
+input[type="submit"] {
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[value="SUMA"] {
+    background-color: #28a745;
+}
+
+input[value="RESTA"] {
+    background-color: #007bff;
+}
+
+input[value="MULTIPLICACION"] {
+    background-color: #ffc107;
+    color: #222;
+}
+
+input[value="DIVISION"] {
+    background-color: #dc3545;
+}
+
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+/* Efecto al presionar */
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+
+</style>
+<body>
+    <form action="receptor.php" method="post">
+        <label for="">Ingrese un numero</label> <input type="number" name = "n1">
+        <label for="">Ingrese el segundo numero</label> <input type="number" name = "n2">
+        <input type="submit" value="SUMA" name="accion"> 
+        <input type="submit" value="RESTA" name = "accion">
+        <input type="submit" value="MULTIPLICACION" name = "accion">
+        <input type="submit" value="DIVISION" name="accion">
+    </form>
+</body>
+</html>
+
+

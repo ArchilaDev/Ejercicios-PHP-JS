@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <script>
+        let user = prompt("Ingrese su usuario\n").toUpperCase();
+        let password = prompt("Ingrese su contraseña\n");
+
+        if (user === "SANTIAGO" && password == "1234") {
+            alert("Bienvenido ;) " + user + "\nHas ingresado como profesor");
+            opcion = prompt("Ingrese una opcion para ingresar a: \n1.Gestionar Curso \n2.Gestionar Estudiantes \n3.Gestionar Promocion\n4.Gestionar ventas\n5.Gestionar perfil\n6)VER MAS");
+
+            switch (opcion) {
+
+                //Caso 1 Gestionar curso
+                case "1":
+                    let opcionCurso = parseInt(prompt("Ingrese una opcion disponible\n1)Crear Curso \n2)Editar Curso\
+                    \n3)Ver curso \n4)Eliminar Curso \n5)Buscar curso"));
+                    switch (opcionCurso) {
+                        case 1:
+                            let curso = prompt("Ingrese el nombre del curso a crear: \n ");
+                            if (curso != "") {
+                                let precio = parseFloat(prompt("Ingrese el precio del curso: \n "));
+                                if (precio == parseFloat(precio)) {
+                                    let genero = prompt("Ingrese el genero del curso: \n ");
+
+                                    if (genero != "") {
+                                        document.writeln(`<p style = "text-align:center;">================ <br> Curso creado con nombre de: ${curso} <br> Precio de: ${precio} <br> Genero de: ${genero} <br> ===================== </p>`);
+                                        alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    } else {
+                                        alert("Genero no puede estar vacio, por favor vuelva a iniciar el programa y no olvide ponerle nombre al genero");
+                                    }
+                                } else {
+                                    alert("No es un numero , por favor coloque un numero");
+
+                                }
+
+                            } else {
+                                alert("Ingrese al menos un caracater para el nombre del curso \n Por favor vuelva a iniciar el programa");
+                            }
+
+                            break;
+                        case 2:
+
+                            let editar = prompt("Cursos disponibles: \n1) C++\n120$\nProgramacion [EDITAR] \n-----------------\n 2) C# \n110$\nProgramacion [EDITAR]");
+
+                            switch (editar) {
+                                case "1":
+                                    let opcionEditar = parseInt(prompt("¿Que opcion quieres editar del curso?\n1)Nombre\n2)Precio\n3)Genero\n4)Cancelar edicion"));
+                                    let nombreNuevoCurso = "C++";
+                                    let precioNuevoCurso = 120;
+                                    let generoNuevoCurso = "Programacion";
+
+                                    switch (opcionEditar) {
+                                        case 1:
+                                            nombreNuevoCurso = prompt("Ingrese el nombre nuevo al curso");
+                                            if (nombreNuevoCurso != "") {
+                                                document.writeln(`<p style = "text-align:center;">================ <br> ---Curso editado recientemente--- <br>Nombre: ${nombreNuevoCurso} <br>Precio:  ${precioNuevoCurso}$ <br>Genero:  ${generoNuevoCurso} <br> ===================== </p>`);
+                                                alert("Cambios guardados correctamente ☑️");
+                                                alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                            } else {
+                                                alert("Error al editar ❌\nSi quiere editar el nombre por favor a menos coloque un caracter");
+                                            }
+
+                                            break;
+                                        case 2:
+                                            precioNuevoCurso = parseFloat(prompt("Ingrese el precio nuevo al curso"));
+                                            if (precioNuevoCurso == parseFloat(precioNuevoCurso)) {
+                                                document.writeln(`<p style = "text-align:center;">================ <br> ---Curso editado recientemente--- <br>Nombre: ${nombreNuevoCurso} <br>Precio:  ${precioNuevoCurso}$ <br>Genero:  ${generoNuevoCurso} <br> ===================== </p>`);
+                                                alert("Cambios guardados correctamente ☑️");
+                                                alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                            } else {
+                                                alert("Error al editar ❌\nSi quiere editar el precio por favor a menos coloque un caracter o que el precio sea un numero");
+                                            }
+
+                                            break;
+                                        case 3:
+                                            generoNuevoCurso = prompt("Ingrese el genero nuevo al curso");
+                                            if (generoNuevoCurso != "") {
+                                                document.writeln(`<p style = "text-align:center;">================ <br> ---Curso editado recientemente--- <br>Nombre: ${nombreNuevoCurso} <br>Precio:  ${precioNuevoCurso}$ <br>Genero:  ${generoNuevoCurso} <br> ===================== </p>`);
+                                                alert("Cambios guardados correctamente ☑️");
+                                                alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                            } else {
+                                                alert("Error al editar ❌\nSi quiere editar el nombre por favor a menos coloque un caracter");
+                                            }
+
+                                            break;
+                                        case 4:
+                                            alert("No se a confirmado ningun cambio");
+                                            document.writeln(`<p style = "text-align:center;">================ <br> ---Curso escogido recientemente--- <br>Nombre: ${nombreNuevoCurso} <br>Precio:  ${precioNuevoCurso}$ <br>Genero:  ${generoNuevoCurso} <br> ===================== </p>`);
+                                            break;
+
+                                        default:
+                                            alert("Escoja una opcion valida");
+                                            break;
+                                    }
+
+
+                                    break;
+
+                                case "2":
+                                    let opcionEditar2 = parseInt(prompt("¿Que opcion quieres editar del curso?\n1)Nombre\n2)Precio\n3)Genero\n4)Cancelar edicion"));
+                                    let nombreNuevoCurso2 = "C#";
+                                    let precioNuevoCurso2 = 110;
+                                    let generoNuevoCurso2 = "Programacion";
+                                    //Para no alargar el codigo simplemente dejare que solo se pueda editar una opcion 
+                                    switch (opcionEditar2) {
+                                        case 1:
+                                            nombreNuevoCurso2 = prompt("Ingrese el nombre nuevo al curso");
+
+                                            if (nombreNuevoCurso2 != "") {
+                                                document.writeln(`<p style = "text-align:center;">================ <br> ---Curso editado recientemente--- <br>Nombre: ${nombreNuevoCurso2} <br>Precio:  ${precioNuevoCurso2}$ <br>Genero:  ${generoNuevoCurso2} <br> ===================== </p>`);
+                                                alert("Cambios guardados correctamente ☑️");
+                                                alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                            } else {
+                                                alert("Error al editar ❌\nSi quiere editar el nombre por favor a menos coloque un caracter");
+                                            }
+
+                                            break;
+                                        case 2:
+                                            precioNuevoCurso2 = parseFloat(prompt("Ingrese el precio nuevo al curso"));
+                                            if (precioNuevoCurso2 == parseFloat(precioNuevoCurso2)) {
+                                                document.writeln(`<p style = "text-align:center;">================ <br> ---Curso editado recientemente--- <br>Nombre: ${nombreNuevoCurso2} <br>Precio:  ${precioNuevoCurso2}$ <br>Genero:  ${generoNuevoCurso2} <br> ===================== </p>`);
+                                                alert("Cambios guardados correctamente ☑️");
+                                                alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                            } else {
+                                                alert("Error al editar ❌\nSi quiere editar el precio por favor a menos coloque un caracter o que el precio sea un numero");
+                                            }
+
+                                            break;
+                                        case 3:
+                                            generoNuevoCurso2 = prompt("Ingrese el genero nuevo al curso");
+
+                                            if (generoNuevoCurso2 != "") {
+                                                document.writeln(`<p style = "text-align:center;">================ <br> ---Curso editado recientemente--- <br>Nombre: ${nombreNuevoCurso2} <br>Precio:  ${precioNuevoCurso2}$ <br>Genero:  ${generoNuevoCurso2} <br> ===================== </p>`);
+                                                alert("Cambios guardados correctamente ☑️");
+                                                alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                            }
+
+                                            break;
+                                        case 4:
+                                            alert("No se a confirmado ningun cambio");
+                                            document.writeln(`<p style = "text-align:center;">================ <br> ---Curso escogido recientemente--- <br>Nombre: ${nombreNuevoCurso2} <br>Precio:  ${precioNuevoCurso2}$ <br>Genero:  ${generoNuevoCurso2} <br> ===================== </p>`);
+
+                                            break;
+
+
+                                        default:
+                                            alert("Escoja una opcion valida");
+                                            break;
+                                    }
+
+
+                                    break;
+
+                                default:
+                                    alert("Escoja una opcion disponible");
+                                    break;
+                            }
+                            break;
+                        case 3:
+
+                            let vista = prompt("Cursos: \n1)C++ [VER] \n2)C# [VER] \n3)JavaScript [VER] \n4)GDScript [VER]");
+
+                            switch (vista) {
+                                case "1":
+                                    document.writeln(`<p style = "text-align:center;">================ <br>Nombre: C++ <br> Precio: 120$ <br> Genero: Programacion <br> Sobre el curso: <br> Aprende y domina los fundamentos de C++, uno de los lenguajes más utilizados en el desarrollo de videojuegos. Con este curso aprenderás a programar, crear sistemas y desarrollar la lógica necesaria para construir tus propios videojuegos.<br> ===================== </p>`);
+                                    alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    break;
+                                case "2":
+                                    document.writeln(`<p style = "text-align:center;">================ <br>Nombre: C# <br> Precio: 110$ <br> Genero: Programacion <br> Sobre el curso: <br> Aprende C# y descubre cómo utilizarlo para desarrollar videojuegos. Domina los fundamentos de la programación, crea mecánicas y desarrolla tus propios proyectos interactivos.<br> ===================== </p>`);
+                                    alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    break;
+                                case "3":
+                                    document.writeln(`<p style = "text-align:center;">================ <br>Nombre: JavaScript <br> Precio: 100$ <br> Genero: Programacion <br> Sobre el curso: <br> Aprende y domina JavaScript para crear videojuegos interactivos. Desarrolla mecánicas, controla personajes y crea experiencias 2D y 3D que pueden ejecutarse directamente en el navegador.<br> ===================== </p>`);
+                                    alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    break;
+                                case "4":
+                                    document.writeln(`<p style = "text-align:center;">================ <br>Nombre: GDScript <br> Precio: 100$ <br> Genero: Programacion <br> Sobre el curso: <br> Aprende GDScript y descubre cómo crear videojuegos de forma sencilla y divertida con Godot. Domina la programación, desarrolla mecánicas y convierte tus ideas en experiencias interactivas.<br> ===================== </p>`);
+                                    alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    break;
+
+                                default:
+                                    alert("Escoja un curso valido");
+                                    break;
+                            }
+                            break;
+                        case 4:
+
+                            let eliminar = prompt("Escoja el curso a eliminar:\n1) Nombre: C++\nPrecio: 120$\nGenero: Programacion [ELIMINAR]\n-------------\n2) Nombre: C#\nPrecio: 110$\nGenero: Programacion [ELIMINAR]");
+
+                            switch (eliminar) {
+                                case "1":
+                                    let confirmacion = prompt("¿Estas seguro de eliminar el curso, 'SI'/'NO'?").toUpperCase();
+
+                                    if (confirmacion === "SI") {
+                                        alert("Curso C++ eliminado correctamente ☑️");
+                                        alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    } else if (confirmacion === "NO") {
+                                        alert("Curso sin eliminacion completada ");
+                                        alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    } else {
+                                        alert("Escoja bien la respuesta");
+                                        alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    }
+                                    break;
+                                case "2":
+                                    let confirmacion2 = prompt("¿Estas seguro de eliminar el curso, 'SI'/'NO'?").toUpperCase();
+
+                                    if (confirmacion2 === "SI") {
+                                        alert("Curso C# eliminado correctamente ☑️");
+                                        alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    } else if (confirmacion2 === "NO") {
+                                        alert("Curso sin eliminacion completada ");
+                                        alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    } else {
+                                        alert("Escoja bien la respuesta");
+                                        alert("Para volver al menu por favor vuelva a iniciar el programa");
+                                    }
+                                    break;
+
+                                default:
+                                    alert("Curso no valido, escoja otra opcion");
+                                    break;
+                            }
+
+                            break;
+                        case 5:
+                            let buscado = prompt("Ingrese el curso a buscar:").toUpperCase();
+
+                            if (buscado === "C++") {
+                                document.writeln(`<p style = "text-align:center;">================ <br>Cursos encontrados:<br>Nombre: C++<br>Precio: 120$<br>Genero: Programacion<br>----------<br>Nombre: C++<br>Precio: 130$<br>Genero: Programacion<br> ===================== </p>`);
+                            } else if (buscado === "C#") {
+                                alert(`<p style = "text-align:center;">================ <br>Cursos encontrados:<br>Nombre: C#<br>Precio: 110$<br>Genero: Programacion<br>----------<br>Nombre: C#<br>Precio: 108$<br>Genero: Programacion<br> ===================== </p>`);
+                            } else {
+                                alert("Lo sentimos:(, Curso no encontrado");
+                            }
+                            break;
+                        default:
+                            alert("Por favor ingrese una opcion valida :(");
+                            break;
+                    }break;
+
+                //Caso 2 Gestionar estudiantes    
+                case "2":
+                    console.log("Entro al caso 2");
+
+                    let opcionEstudiante = parseInt(prompt("1)Registrar estudiante \n2)Editar información\n3)Consultar estudiante\n4)Eliminar estudiante"));
+                    switch (opcionEstudiante) {
+                        case 1:
+                            let nombreEstudiante = prompt("Ingrese el nombre del estudiante a resgistrar");
+                            if (nombreEstudiante != "") {
+                                let edad = parseInt(prompt("Ingrese la edad del estudiante", nombreEstudiante));
+
+                                if (edad == parseInt(edad)) {
+                                    let nivel = prompt("Ingrese el nivel el cual se encuentra el estudiante");
+                                    let categoria = prompt("Ingrese la categoria del curso");
+                                    let motor = prompt("Ingrese el motor del lenguaje que quiere ingresar el estudiante");
+                                    if (nivel != "" && categoria != "" && motor != "") {
+                                        alert("Estudiante regirstrado correctamente☑️");
+                                        document.writeln(`<p style = "text-align:center;">================ <br> ---Estudiante Registrado recientemente--- <br> Nombre:${nombreEstudiante} <br>Edad:${edad} <br>Nivel: ${nivel} <br>Categoria: ${categoria} <br>Motor: ${motor} <br> =====================`);
+                                    } else {
+                                        alert("Lo sentimos al parecer hay un campo vacio :(, Por favor vuelva a iniciar el programar y no olvidar rellenar el campo");
+                                    }
+
+
+                                } else {
+                                    alert("¡Ingrese una edad valida!");
+                                }
+                            } else {
+                                alert("El nombre del estudiante no debe estar vacio");
+                            }
+                            break;
+                        case 2:
+                            let editarEstudiante = parseInt(prompt("======Estudiantes disponibles:====== \n1)Nombre: Pedro Perez.\nEdad: 30.\nNivel: Intermedio.\nCategoria: Programación.\nMotor: Unreal.\n [EDITAR]\n======= \n2)Nombre: Pepe Sanchez.\nEdad: 20.\nNivel: Principiante.\nCategoria: Modelado.\nMotor: Blender.\n [EDITAR]"));
+
+                            if (editarEstudiante == 1) {
+                                alert("Estudiante escogido Pedro Perez");
+                                let nombreNuevo = prompt("Ingrese el nombre que quiere cambiarle");
+                                let edadNuevo = parseInt(prompt("Ingrese la edad que quiere cambiarle"));
+
+                                if (edadNuevo == parseInt(edadNuevo)) {
+                                    let nivelNuevo = prompt("Ingrese el nivel que quiere cambiarle");
+                                    let categoriaNuevo = prompt("Ingrese la categoria que quiere cambiarle");
+                                    let motorNuevo = prompt("Ingrese el motor que quiere cambiarle");
+
+                                    if (nombreNuevo != "" && edadNuevo != "" && nivelNuevo != "" && categoriaNuevo != "" && motorNuevo != "") {
+                                        alert("Estudiante editado correctamente ☑️");
+                                        document.writeln(`<p style = "text-align:center;">================ <br> ---Estudiante editado recientemente--- <br> Nombre:${nombreNuevo} <br>Edad:${edadNuevo} <br>Nivel: ${nivelNuevo} <br>Categoria: ${categoriaNuevo} <br>Motor: ${motorNuevo} <br> =====================`);
+                                    } else {
+                                        alert("Hay un campo vacio, vuelva a ejecutar y recuerde llenar los campos.");
+                                    }
+                                } else {
+                                    alert("Ingrese de nuevo , recuerda que la edad debe ser un numero");
+                                }
+
+
+                            } else if (editarEstudiante == 2) {
+                                alert("Estudiante escogido Pepe Sanchez");
+                                let nombreNuevo = prompt("Ingrese el nombre que quiere cambiarle");
+                                let edadNuevo = parseInt(prompt("Ingrese la edad que quiere cambiarle"));
+
+                                if (edadNuevo == parseInt(edadNuevo)) {
+                                    let nivelNuevo = prompt("Ingrese el nivel que quiere cambiarle");
+                                    let categoriaNuevo = prompt("Ingrese la categoria que quiere cambiarle");
+                                    let motorNuevo = prompt("Ingrese el motor que quiere cambiarle");
+
+                                    if (nombreNuevo != "" && edadNuevo != "" && nivelNuevo != "" && categoriaNuevo != "" && motorNuevo != "") {
+                                        alert("Estudiante editado correctamente ☑️");
+                                        document.writeln(`<p style = "text-align:center;">================ <br> ---Estudiante editado recientemente--- <br> Nombre:${nombreNuevo} <br>Edad:${edadNuevo} <br>Nivel: ${nivelNuevo} <br>Categoria: ${categoriaNuevo} <br>Motor: ${motorNuevo} <br> ===================== </p>`);
+                                    } else {
+                                        alert("Hay un campo vacio, vuelva a ejecutar y recuerde llenar los campos.");
+                                    }
+                                } else {
+                                    alert("Ingrese de nuevo , recuerda que la edad debe ser un numero");
+                                }
+                            } else {
+                                alert("Escoja una opcion valida, reinicie el programa");
+                            }
+
+                            break;
+                        case 3:
+                            //SE REGISTRARA EL ESTUDIANTE POR NOMBRE O ID DE LA BSE DE DATOS(ESTO ES SOLO IDEA DEL PROGRAMADOR ;))
+                            let buscadoEstudiante = prompt("Ingrese el ID O el nombre del estudiante a consultar:\n").toUpperCase();
+                            switch (buscadoEstudiante) {
+                                case "SANTIAGO ARCHILA":
+                                    document.writeln("<p style = 'text-align:center;'>================ <br> ---Estudiante encontrado--- <br> Nombre:Santiago Archila <br>Edad: 30 <br>Nivel: Intermedio <br>Categoria: Programacion. <br>Motor: GODOT <br> ===================== </p>");
+                                    break;
+                                case "JAMES RODRIGUEZ":
+                                    document.writeln("<p style = 'text-align:center;'>================ <br> ---Estudiante encontrado--- <br> Nombre:James Rodriguez <br>Edad: 15 <br>Nivel: Avanzado <br>Categoria: Modelado. <br>Motor: Blender <br> =====================");
+                                    break;
+                                case "PEDRO PEREZ":
+                                    document.writeln("<p style = 'text-align:center;'>================ <br> ---Estudiante encontrado--- <br> Nombre:Pedro Perez <br>Edad: 20 <br>Nivel: Principiante <br>Categoria: Programacion. <br>Motor: Unreal <br> =====================");
+                                    break;
+                                case "PEPE SANCHEZ":
+                                    document.writeln("<p style = 'text-align:center;'>================ <br> ---Estudiante encontrado--- <br> Nombre:Pepe Sanchez <br>Edad: 25 <br>Nivel: Principiante <br>Categoria: Modelado. <br>Motor: Blender <br> =====================");
+                                    break;
+
+                                default:
+                                    alert("Lo sentimos pero ese estudiante no se encuentra registrado en la bse de datos.");
+                                    break;
+                            }
+                            break;
+                        case 4:
+                            let eliminarEstudiante = parseInt(prompt("======Estudiantes disponibles:====== \n1)Nombre: Pedro Perez.\nEdad: 30.\nNivel: Intermedio.\nCategoria: Programación.\nMotor: Unreal.\n [ELIMINAR]\n======= \n2)Nombre: Pepe Sanchez.\nEdad: 20.\nNivel: Principiante.\nCategoria: Modelado.\nMotor: Blender.\n [ELIMINAR]"));
+
+                            if (eliminarEstudiante == parseInt(eliminarEstudiante)) {
+
+                                if (eliminarEstudiante == 1) {
+                                    let confirmarEstudiante = prompt("¿Estas seguro de eliminar al estudiante con nombre de: Pedro Perez?\n SI/NO").toUpperCase();
+
+                                    if (confirmarEstudiante == "SI") {
+                                        alert("Estudiante eliminado correctamente ☑️");
+                                    } else if (confirmarEstudiante == "NO") {
+                                        alert("Eliminacion no completada ❌")
+                                    } else {
+                                        alert("Respuesta no correcta, no prosigue ningun cambio");
+                                    }
+                                } else if (eliminarEstudiante == 2) {
+                                    let confirmarEstudiante = prompt("¿Estas seguro de eliminar al estudiante con nombre de: Pepe Sanchez?\n SI/NO").toUpperCase();
+                                    if (confirmarEstudiante == "SI") {
+                                        alert("Estudiante eliminado correctamente ☑️");
+                                    } else if (confirmarEstudiante == "NO") {
+                                        alert("Eliminacion no completada ❌")
+                                    } else {
+                                        alert("Respuesta no correcta, no prosigue ningun cambio");
+                                    }
+                                }
+
+                            } else {
+                                alert("Escoja un numero valido");
+                            }
+                            break;
+                        default:
+                            alert("Escoja una opcion valida por favor");
+                            break;
+                    }
+                    break;
+                //Gestion de promocion
+                case "3":
+                    console.log("Ingreso al caso 3");
+                    let opcionPromocion = parseInt(prompt("1)Crear promocion \n2)Editar promocion\n3)Consultar promocion\n4)Eliminar promocion"));
+
+                    switch (opcionPromocion) {
+                        case 1:
+                            let nombrePromocion = prompt("Ingrese el nombre de la promocion: \n");
+                            let descuentoPromocion = parseFloat(prompt("Ingrese el descuento de la promocion: \n"));
+
+                            if (descuentoPromocion == parseFloat(descuentoPromocion)) {
+                                let cursoPromocion = prompt("Ingrese el nombre del curso a promocionar: \n");
+                                let fechaInicio = prompt("Ingrese la fecha de inicio dd/mm/aa/hh");
+                                let fechaFinalizacion = prompt("Ingrese la fecha de finalizacion dd/mm/aa/hh");
+                                if (nombrePromocion != "" && descuentoPromocion != "" && cursoPromocion != "" && fechaInicio != "" && fechaFinalizacion != "") {
+                                    alert("Promocion Creada exitosamente ☑️")
+                                    document.writeln(`<p style = 'text-align:center;'>================ <br> --Promocion-- <br> Nombre: ${nombrePromocion} <br> Descuento: ${descuentoPromocion}% <br> Curso: ${cursoPromocion} <br> Fecha de inicio: ${fechaInicio} <br> Fecha finalizacion: ${fechaFinalizacion} <br> =====================`);
+                                } else {
+                                    alert("Uno o mas campos estan vacios, vuelva a iniciar el programa y no olvide rellenar los campos");
+                                }
+                            } else {
+                                alert("Ingrese un numero valido en porcentaje");
+                            }
+                            break;
+                        case 2:
+                            let promocioNueva = parseInt(prompt("===Promociones activas===\nNombre:Oferta C++\nDescuento: 20%\nCurso: C++\nFecha Inicio: 10/10/2027/14:00\nFecha Finalizacion: 11/10/2027/14:00\n======\nNombre:Oferta Blender\nDescuento: 10%\nCurso: Modelado 3D\nFecha Inicio: 11/10/2027/12:00\nFecha Finalizacion: 14/10/2027/20:00"));
+
+                            switch (promocioNueva) {
+                                case 1:
+
+                                    alert("Curso escogido de C++");
+                                    let nombreNuevo = prompt("Ingrese el nombre nuevo de la promocion");
+                                    let descuentoNuevo = parseInt(prompt("Ingrese el descuento nuevo de la promocion"));
+                                    if (descuentoNuevo == parseInt(descuentoNuevo)) {
+                                        let cursoNuevo = prompt("Ingrese el curso nuevo de la promocion");
+                                        let fechaInicioNuevo = prompt("Ingrese la fecha de inicio nueva de la promocion");
+                                        let FechaFinalNuevo = prompt("Ingrese la fecha final nueva de la promocion");
+
+                                        if (nombreNuevo != "" && cursoNuevo != "" && fechaInicioNuevo != "" && FechaFinalNuevo != "") {
+                                            alert("Promocion Editada exitosamente ☑️")
+                                            document.writeln(`<p style = 'text-align:center;'>================ <br> --Promocion-- <br> Nombre: ${nombreNuevo} <br> Descuento: ${descuentoNuevo} <br> Curso: ${cursoNuevo} <br> Fecha de inicio: ${fechaInicioNuevo} <br> Fecha finalizacion: ${FechaFinalNuevo} <br> =====================`);
+                                        } else {
+                                            alert("Uno o mas campos estan vacios, vuelva a iniciar el programa y no olvide rellenar los campos");
+                                        }
+
+                                    } else {
+                                        alert("Ingrese un numero valido");
+                                    }
+
+
+                                    break;
+                                case 2:
+                                    alert("Curso escogido de Blender");
+                                    let nombreNuevo2 = prompt("Ingrese el nombre nuevo de la promocion");
+                                    let descuentoNuevo2 = parseInt(prompt("Ingrese el descuento nuevo de la promocion"));
+                                    if (descuentoNuevo2 == parseInt(descuentoNuevo2)) {
+                                        let cursoNuevo2 = prompt("Ingrese el curso nuevo de la promocion");
+                                        let fechaInicioNuevo2 = prompt("Ingrese la fecha de inicio nueva de la promocion");
+                                        let FechaFinalNuevo2 = prompt("Ingrese la fecha final nueva de la promocion");
+
+                                        if (nombreNuevo2 != "" && cursoNuevo2 != "" && fechaInicioNuevo2 != "" && FechaFinalNuevo2 != "") {
+                                            alert("Promocion Editada exitosamente ☑️")
+                                            document.writeln(`<p style = 'text-align:center;'>================ <br> --Promocion-- <br> Nombre: ${nombreNuevo2} <br> Descuento: ${descuentoNuevo2} <br> Curso: ${cursoNuevo2} <br> Fecha de inicio: ${fechaInicioNuevo2} <br> Fecha finalizacion: ${FechaFinalNuevo2} <br> =====================`);
+                                        } else {
+                                            alert("Uno o mas campos estan vacios, vuelva a iniciar el programa y no olvide rellenar los campos");
+                                        }
+
+                                    } else {
+                                        alert("Ingrese un numero valido");
+                                    }
+                                    break;
+
+                                default:
+                                    alert("Escoja una opcion valida");
+                                    break;
+                            }
+
+                            break;
+                        case 3:
+                            let buscadoPromocion = prompt("Escriba el nombre de la promocion a buscar\n").toUpperCase();
+
+                            if (buscadoPromocion === "BLENDER") {
+                                document.writeln("<p style = 'text-align:center;'>================ <br> ---Promocion encontrada--- <br> Nombre:Especial Blender <br>Descuento: 30% <br>Curso: Blender <br>Fecha Inicio: 20/09/2027/23:00 <br>Fecha Finalizacion: 20/11/2027/23:00 <br>---------<br>Nombre:Brutal Blender <br>Descuento: 10% <br>Curso: Blender <br>Fecha Inicio: 22/09/2027/23:00 <br>Fecha Finalizacion: 24/11/2027/23:00 <br> ===================== </p>");
+                            } else if (buscadoPromocion === "C++") {
+                                document.writeln("<p style = 'text-align:center;'>================ <br> ---Promocion encontrada--- <br> Nombre:Especial C++ <br>Descuento: 50% <br>Curso: C++ <br>Fecha Inicio: 20/10/2027/23:00  <br>Fecha Finalizacion: 21/10/2027/23:00 <br>---------<br>Nombre:Brutal C++ <br>Descuento: 5% <br>Curso: Blender <br>Fecha Inicio: 22/09/2027/23:00  <br>Fecha Finalizacion: 24/11/2027/23:00 <br> ===================== </p>");
+                            } else {
+                                alert("Promocion no encontrada");
+                            }
+                            break;
+                        case 4:
+                            let eliminarPromocion = parseInt(prompt("======Promociones disponibles:====== \n1)Nombre:Promocion JavaScript.\nDescuento: 5%\nCurso: JavaScript.\nFecha de inicio: 22/09/2027/23:00 \nFecha Final: 24/11/2027/23:00\n [ELIMINAR]\n=======\n2)Nombre:Promocion GDScript.\nDescuento: 5%\Curso: GDScript.\nFecha de inicio: 22/09/2027/23:00 \nFecha Final: 24/11/2027/23:00\n [ELIMINAR]"));
+
+                            if (eliminarPromocion == parseInt(eliminarPromocion)) {
+                                
+                                if (eliminarPromocion == 1) {
+                                    let confirmarPromocion = prompt("¿Estas seguro de eliminar la promocion con nombre de: Promocion JavaScript?\n SI/NO").toUpperCase();
+
+                                    if (confirmarPromocion == "SI") {
+                                        alert("Promocion eliminada correctamente ☑️");
+                                    } else if (confirmarPromocion == "NO") {
+                                        alert("Eliminacion no completada ❌");
+                                    } else {
+                                        alert("Respuesta no correcta, no prosigue ningun cambio");
+                                    }
+                                } else if (eliminarPromocion == 2) {
+                                    let confirmarPromocion = prompt("¿Estas seguro de eliminar la promocion con nombre de: Promocion GDScript?\n SI/NO").toUpperCase();
+                                    if (confirmarPromocion == "SI") {
+                                        alert("Promocion eliminada correctamente ☑️");
+                                    } else if (confirmarPromocion == "NO") {
+                                        alert("Eliminacion no completada ❌");
+                                    } else {
+                                        alert("Respuesta no correcta, no prosigue ningun cambio");
+                                    }
+                                }
+
+                            } else {
+                                alert("Escoja un numero valido");
+                            }
+                            break;
+
+                        default:
+                            alert("Escoja una opcion valida por favor");
+                            break;
+                    }
+                    break;
+                //Gestion de ventas
+                case "4":
+                    console.log("Ingreso al caso 4");
+                    let opcionVenta = parseInt(prompt("1)Ver cursos vendidos \n2)Ver cantidad de estudiantes inscritos\n3)Consultar ingresos\n4)Consultar ventas por curso"));
+
+                    switch (opcionVenta) {
+                        case 1:
+                            document.writeln("<p style = 'text-align:center;'>================ <br> ---CURSOS VENDIDOS--- <br> Curso: C++ <br>Ventas: 15<br><br>Curso: C# <br>Ventas: 5<br><br>Curso: Blender <br>Ventas: 5<br><br>Curso: JavaScript <br>Ventas: 25 <br> ===================== </p>");
+                            break;
+                        case 2:
+                            document.writeln("<p style = 'text-align:center;'>================ <br> ---ESTUDIANTES INSCRITOS--- <br> C++: 15 Estudiantes<br><br>C#: 10 Estudiantes <br><br>Blender: 10 Estudiantes<br><br>JavaScript: 50 Estudiantes <br><br>Total inscritos: 85 <br> ===================== </p>");
+                            break;
+                        case 3:
+                            document.writeln("<p style = 'text-align:center;'>================ <br> ---INGRESOS--- <br> C++: 1500$<br><br>C#: 1600$ <br><br>Blender:2500$ <br><br>JavaScript:5000$ <br><br>Total de ingresos: 10.600$ <br> ===================== </p>");
+                            break;
+
+                        case 4:
+                            let consultarVenta = prompt("Coloque el nombre del curso para saber sus ventas").toUpperCase();
+
+                            switch (consultarVenta) {
+                                case "JAVASCRIPT":
+                                    document.writeln("<p style = 'text-align:center;'>================ <br> ---VENTAS JAVASCRIPT---<br>Precio:110$<br>Estudiantes: 15<br>Unidades vendidas: 15<br>Ingresos: 1650$ <br> ===================== </p>");
+                                    break;
+                                case "C++":
+                                    document.writeln("<p style = 'text-align:center;'>================ <br> ---VENTAS C++---<br>Precio:100$<br>Estudiantes: 8<br>Unidades vendidas: 15<br>Ingresos: 800$ <br> ===================== </p>");
+                                    break;
+                                case "BLENDER":
+                                    document.writeln("<p style = 'text-align:center;'>================ <br> ---VENTAS BLENDER---<br>Precio:140$<br>Estudiantes: 10<br>Unidades vendidas: 15<br>Ingresos: 1400$ <br> ===================== </p>");
+                                    break;
+
+                                default:
+                                    alert("Lo sentimos, en el momento el curso no se encuentra disponible");
+                                    break;
+                            }
+
+                            break;
+
+                        default:
+                            alert("Ingrese un numero valido");
+                            break;
+                    }
+                    break;
+                //Gestion del perfil
+                case "5":
+                    console.log("Ingreso al caso 5");
+                    let opcionPerfil = parseInt(prompt("1)Ver información del perfil \n2)Editar nombre\n3)Cambiar contraseña\n4)Editar correo\n5)Ver cursos creados\n6)Cerrar seccion"));
+
+                    switch (opcionPerfil) {
+                        case 1:
+                            document.writeln("<p style = 'text-align:center;'>================ <br> ---INFORMACION DEL PERFIL---<br>Nombre: Santiago<br>Correo: santiago@gmail.com<br>Rol: Profesor<br>Cursos creados: 4<br>Estudiantes: 40<br> ===================== </p>");
+                            break;
+                        case 2:
+                            let nombreNuevo = prompt("Ingrese un nombre nuevo");
+                            if (nombreNuevo != "") {
+                                alert("Cambios guardados correctamente ☑️")
+                                document.writeln(`<p style = 'text-align:center;'>================ <br> ---Cambios recientes---<br>Nombre anterior: Santiago <br>Nombre nuevo: ${nombreNuevo} <br> ===================== </p>`);
+                            } else {
+                                alert("El nombre no puede estar vacio");
+                            }
+
+                            break;
+                        case 3:
+                            let contraseniaActual = prompt("Ingrese su contraseña actual");
+                            //Reutilizar variable password
+                            if (contraseniaActual == password) {
+                                let contraseniaNueva = prompt("Ingrese su contraseña nueva");
+                                let contraseniaConfirmar = prompt("confirme su contraseña nueva");
+
+                                if (contraseniaNueva === contraseniaConfirmar && contraseniaNueva != "") {
+                                    alert("Cambios guardados correctamente ☑️");
+                                } else {
+                                    alert("Las contraseñas no coinciden o el campo esta vacio");
+                                }
+                            } else {
+                                alert("Contraseña incorrecta");
+                            }
+
+                            break;
+                        case 4:
+                            let correoActual = prompt("Ingrese su correo actual");
+                            let correo = "santiago@gmail.com";
+                            //Reutilizar variable password
+                            if (correoActual == correo) {
+                                let correoNuevo = prompt("Ingrese su nuevo correo");
+                                let codigo = 12980;
+                                console.log("Hola Santiago este es tu codigo de confirmacion",codigo);
+                                let confirmarCodigo = prompt("Ingrese el codigo que enviamos al correo para confimar que es usted");
+                                if (codigo == confirmarCodigo) {
+                                    let confirmarCorreo = prompt("confirme su correo nuevamente");
+
+                                    if (correoNuevo === confirmarCorreo && correoNuevo != "") {
+                                        alert("Cambios guardados correctamente ☑️");
+                                    } else {
+                                        alert("Los correos no coinciden o el campo esta vacio");
+                                    }
+                                }else{
+                                    alert("Codigo incorrecto");
+                                }
+
+
+                            } else {
+                                alert("Correo incorrecto");
+                            }
+                            break;
+                        case 5:
+                            document.writeln("<p style = 'text-align:center;'>================ <br> ---MIS CURSOS---<br>1)C++ <br>Precio: 120$<br><br> 2)C# <br>Precio: 110$<br><br> 3)JavaScript <br>Precio: 100$<br><br> 4)GDScript <br>Precio: 100$<br><br>Total de cursos creados: 4 <br> ===================== </p>");
+                            break;
+                        case 6:
+                            let salida = prompt("¿Estas seguro de que quieres salir? SI/NO").toUpperCase();
+                            if (salida === "SI") {
+                                alert("Cerrando seccion ↺");
+                            } else if (salida === "NO") {
+                                alert("Igual saldras porque no hay bucle para regresarte al login :3 ");
+                            } else {
+                                alert("No se que respondiste pero saldras por falta de presupuesto del programa");
+                            }
+                            break;
+
+                        default:
+                            alert("Escoja una opcion valida");
+                            break;
+                    }
+                    break;
+                case "6":
+                    console.log("Ingreso al caso 6");
+                    alert("Proximamente mas opciones con mas funcionalidades y validaciones ;)");
+                    break;
+                default:
+                    alert("Ingrese una opcion valida, por favor vuelva a iniciar el programa");
+                    break;
+            }
+        } else {
+            alert("Usuario o contraseña incorrecta, por favor vuelva a iniciar el programa para volver al inicio");
+        }
+
+
+    </script>
+</body>
+
+</html>

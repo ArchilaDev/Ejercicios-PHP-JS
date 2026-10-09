@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Calcular de horas extras nocturnas
+        crea un script que reciba el asalario mensual base de un empleado y la cantidad de horas extra nocturnas
+        trabajadas en el mes.Asumiendo que el mes labolar tiene 240 horas y que la hora extra nocturna tiene un recargo del
+        35% sobre la hora ordinaria, calcula y muestra el valor a pagar por horas extra.
+        */
+
+        let salario = parseFloat(prompt("Ingrese el salario del empleado"));
+        let hora = 240
+        let horaExtra = parseFloat(prompt("Ingrese la hora extra del empleado"));
+        let valorHora = salario/hora;
+        let recargoNoc = 1.35; 
+        let pagoExtra = horaExtra * (valorHora * recargoNoc);
+        
+
+        document.writeln(`Su total de salario es de: ${Math.round(total)}`);
+
+    </script>
+</body>
+</html>

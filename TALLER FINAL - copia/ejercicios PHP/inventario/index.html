@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquidacion de nomina</title>
+</head>
+
+<body style="background-color: rgb(57, 13, 98); color: white; text-align: center;">
+
+    <form action="receptor.php" method="POST">
+
+        <h2>Liquidacion de nomina</h2>
+        <label>Numero de empleados</label><br>
+        <input type="number" name="empleados"  required><br>
+        <h3>Empleado</h3>
+        <label>Salario base</label><br>
+        <input type="number" name="salario" required><br>
+        <label>Modalidad (Presencial, Teletrabajo, Remoto)</label><br>
+        <input type="text" name="modalidad" required><br>
+        <br>
+        <input type="submit" value="calcular" name="calcular">
+
+    </form>
+    <script>
+        alert("Al ser php y ejecicios 'basicos' solo se podra registrar un empleado  ")
+    </script>
+</body>
+</html>

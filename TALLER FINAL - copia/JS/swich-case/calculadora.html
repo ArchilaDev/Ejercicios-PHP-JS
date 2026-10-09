@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <script>
+        let n1 = parseFloat(prompt("Ingrese un numero"));
+        let n2 = parseFloat(prompt("Ingrese un numero"));
+
+        let opcion = prompt("Que operacion va a realizar?\n + \n - \n * \n /");
+        switch (opcion) {
+            case "+":
+                suma = n1 + n2;
+                document.writeln(`El resultado es: ${suma}`);
+                break;
+            case "-":
+                resta = n1 - n2;
+                document.writeln(`El resultado es: ${resta}`);
+                break;
+            case "*":
+                multiplicacion = n1 * n2;
+                document.writeln(`El resultado es: ${multiplicacion}`);
+                break;
+            case "/":
+                if (n1 <= 0 || n2 <= 0) {
+                    alert("No se puede dividir por cero")
+                } else {
+                    division = n1 / n2;
+                    document.writeln(`El resultado es: ${division}`);
+                }
+
+                break;
+
+            default:
+                alert("Elija una opcion valida");
+                break;
+        }
+    </script>
+</body>
+
+</html>

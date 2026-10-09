@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" style="text-align: center;">
+        <label>Usuario</label>
+        <br><input type="text" name="" id="txtUser" required><br>
+        <label>Clave</label>
+        <br><input type="password" name="" id="txtClave" required><br>
+        <input type="button" value="Iniciar seccion" onclick="iniciarSeccion()">
+    </form>
+    <script>
+        //DOM DOCUMENT OBJECT MODEND
+
+        function empty(valor) {
+
+            return valor === null || valor === undefined || valor.trim() === "";
+        }
+        function iniciarSeccion() {
+            let usuario = document.getElementById("txtUser").value; //capturamos el objeto
+            let clave = document.getElementById("txtClave").value; //capturamos el objeto
+
+            if (empty(usuario) || empty(clave)) {
+                alert("Por favor, complete todos los campos");
+                document.writeln("Intentelo de nuevo");
+                return;
+            }
+            if (usuario !== "santiago" || clave !== "123") {
+                alert("Fallo de autentificacion");
+            } else {
+                alert("Bienvenido " + usuario);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

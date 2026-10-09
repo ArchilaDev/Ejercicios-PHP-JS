@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label>usuario</label>
+        <br><input type="text" name="" id="txtUser"><br>
+        <label>Clave</label>
+        <br><input type="password" name="" id="txtClave"><br>
+        <input type="button" value="Iniciar seccion" onclick="iniciarSeccion()">
+    </form>
+    <script>
+        //DOM DOCUMENT OBJECT MODEND
+        function iniciarSeccion() {
+            let usuario = document.getElementById("txtUser").value; //capturamos el objeto
+            let clave = document.getElementById("txtClave").value; //capturamos el objeto
+
+            if(usuario !== "santiago" || clave !== "123"){
+                alert("Antentificacion fallida");
+                document.writeln("Intentelo de nuevo");
+            }else{
+                alert("Eres un pro");
+                document.writeln("Bienvenido Usuario");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

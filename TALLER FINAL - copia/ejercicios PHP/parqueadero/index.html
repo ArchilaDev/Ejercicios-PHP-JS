@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parqueadero</title>
+</head>
+<body style="background-color: rgb(57, 13, 98); color: white; text-align: center;">
+    <form action="./receptor.php" method="POST">
+        <h2>Parqueadero</h2>
+        <label for="">Tipo de automovil/bicicleta</label> <br>
+         <input type="text" name="txtTipo"> <br>
+         <label for="">Tiempo estacionado . Coloquelo en minutos</label> <br>
+         <input type="number" name = "tiempo"> <br>
+        <label for="">Esquema de cobro (por ejemplo: dia)</label> <br>
+        <input type="text" name="esquema"> <br>
+         <input type="submit" value="calcular" name ="calcular">
+    </form>
+</body>
+</html>
